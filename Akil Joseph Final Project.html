@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Final Project Style.css">
+	<title>Final Project by Akil Joseph</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#quizArea").hide();
+			$("#loseScreen").hide();
+			$("#winScreen").hide();
+			
+			$("#startButton").click(function(){
+				$("#quizStart").fadeOut();
+				$("#quizArea").fadeIn();
+			});
+		});
+	</script>	
+	
+</head>
+
+<body>
+
+	<center>
+		<h1>Final Project</h1>
+	</center>	
+		
+	<div id="quizStart">
+	
+		<center>
+			<h2>Akil Joseph's Quiz Extravaganza</h2>
+		<center>
+		<button id="startButton">Start Quiz</button>
+		
+	</div>
+	
+	<div id="loseScreen">
+	
+		<center>
+			<h2>You Lose<h2>
+			<img id="loseImage" src="loseImage.gif" alt="lose">
+			<button id="retryButton">Play Again?</button>
+		</center>
+		
+	</div>
+	
+	<div id="winScreen">
+	
+		<center>
+			<h2>You Won!</h2>
+			<h2>Congratulations!</h2>
+			<img id="winImage" src="winImage.gif" alt="win">
+			<button id="playAgain">Play Again?</button>
+		</center>
+		
+	</div>
+		
+	<div id="quizArea">
+	
+		<center>
+			<h3 id="quizQuestion">How many heading elements are in HTML?</h3>
+			<h4 id="questionProgress">Question: 1</h4>
+		</center>
+		
+		<div id="answer1">
+			<button class="quizButton" id="choice1">1</button>
+			<h4 class="choiceText" id="choice1Text">Ten</h4>
+		</div>
+		
+		<div id="answer2">
+			<button class="quizButton" id="choice2">2</button>
+			<h4 class="choiceText" id="choice2Text">One</h4>
+		</div>
+		
+		<div id="answer3">
+			<button class="quizButton" id="choice3">3</button>
+			<h4 class="choiceText" id="choice3Text">Three</h4>
+		</div>
+		
+		<div id="answer4">
+			<button class="quizButton" id="choice4">4</button>
+			<h4 class="choiceText" id="choice4Text">Six</h4>
+		</div>
+		
+		<h4 id="lifeCounter">Life: 5</h4>
+		<h4 id="timeCounter">Time: 60</h4>
+		<h4 id="previousScore">Previous Score: 0</h4>
+		
+	</div>
+	
+	<script src="Final Project Script.js"></script>
+</body>
+
+</html>
